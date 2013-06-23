@@ -1,0 +1,132 @@
+gespeaker (0.8.2) all; urgency=low
+
+  * Switch to the new mbrola and espeak versions
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 22 Jun 2013 17:14:32 +0100
+
+  * New german translation by Heinrich Schwietering
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sun, 7 Dic 2010 18:14:44 +0100
+
+  * New faroese translation by Gunleif Joensen.
+  * Fixed handling of broken symlinks for amsn and emesene plugins
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sun, 17 Oct 2010 20:48:43 +0200
+
+gespeaker (0.8.1) all; urgency=low
+
+  * New bulgarian translation by Svetoslav Stefanov.
+  * User configuration moved in XDG_CONFIG_HOME instead of previous hardcoded
+    folder (sorry for your saved settings).
+    http://live.gnome.org/GnomeGoals/XDGConfigFolders
+    http://ploum.frimouvy.org/?207-modify-your-application-to-use-xdg-folders
+  * New plugins architecture
+  * Moved dbus, save voice settings, save window size, welcome message in
+    external plugins.
+  * New command-line features
+  * Stop previous play on quit (moved on external plugin)
+    http://code.google.com/p/gespeaker/issues/detail?id=24
+  * New plugins: debug, save window position
+  * New plugins minimal configuration in preferences dialog
+  * New Telepathy, Pidgin, Emesene, Kopete and aMSN plugins
+    http://developer.pidgin.im/wiki/DbusHowto
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 26 Jun 2010 18:48:21 +0200
+
+gespeaker (0.8) all; urgency=low
+
+  * Moved translators from .po files to doc/translators
+  * New polish translation by Andrey J.
+  * New DBUS interface to interact from external apps
+  * Fixed minimum words gap from 5 to 0 in main UI
+    http://code.google.com/p/gespeaker/issues/detail?id=20
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 12 Jun 2010 14:13:40 +0100
+
+gespeaker (0.7) all; urgency=low
+
+  * New handlepaths module to reflect the changed directory structure.
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sun, 6 Dec 2009 13:40:00 +0100
+
+gespeaker (0.6) all; urgency=low
+
+  * Fixed audio testing localized string.
+  * An error message is now shown if the audio player is not found instead of
+    quietly ignore the error.
+  * New spanish translation provided by David Prieto.
+  * New mbrola support with more realistic voices.
+  * Added mbrola voices to languages list.
+  * Tabbed preferences dialog for new mbrola support.
+  * Moved language, voice type and variants to base settings and pitch, volume,
+    speed and gap sliders to advanced settings upon suggestion of frandavid100.
+  * Added automatic txt extension on saving text file.
+  * Added automatic wav extension on saving WAVE file. This was causing weird
+    noises on playing the recorded track if it wasn't a .wav filename.
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 18 Jul 2009 11:42:00 +0100
+
+gespeaker (0.5) all; urgency=low
+
+  * Added an extender separator for settings to allow maximum usage of the
+    window with the text.
+  * Added filters for load/save text dialogs.
+  * Added support for recording the audio track to wave.
+  * Added a statusbar showing the active record mode.
+  * Added preferences dialog.
+  * Added preferences save and reload for welcome message, window size,
+    voice settings and expander status.
+  * Added support for audio frontend: ALSA (aplay), PulseAudio (paplay) and
+    user customized player command, with audio command test.
+  * Added voice variants by scanning /usr/share/espeak-data/voices/!v folder
+    for extra voice variants.
+  * Fixed stock icon for DialogFileOpenSave.
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Fri, 30 Jun 2009 18:48:50 +0100
+
+gespeaker (0.4) all; urgency=medium
+
+  * Added SubprocessWrapper.Popen to wrap subprocess.Popen in order to support
+    python versions prior to 2.6 which don't have the delete argument on object
+    creation.
+  * Added TempfileWrapper.NamedTemporaryFile to wrap tempfile's Popen object in
+    order to support python versions prior to 2.6 which don't have terminate
+    and send_signal methods.
+    Actually no more used, left for future usage.
+  * Now gespeaker works with python version 2.4 and higher.
+  * Temporary file for output to speech is created at program start so new
+    temporary files are no longer created after each play.
+  * Included pause and resume features.
+  * New icon and logo, kindly provided by MIX.
+  * New french translation provided by Emmanuel.
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Fri, 20 Jun 2009 18:55:40 +0100
+
+gespeaker (0.3) all; urgency=low
+
+  * Added support for voice type (male/female) via +12 for female voice.
+  * Removed escaped text substitution with a more secure temporary file with
+    the text to play.
+  * Substituted direct shell piping with more secure subprocess' piping.
+  * Better control of external calls, now both espeak and player execution are
+    polled for exitcode and terminated if requested.
+  * Added documentation and artists parameters to DialogAbout.
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Thu, 18 Jun 2009 01:21:30 +0100
+
+gespeaker (0.2)
+
+  * Changed UI layout according to Gnome HIG specifications
+    http://library.gnome.org/devel/hig-book/stable/design-window.html.en
+  * Fixed DialogAbout.set_icon_from_file icon usage, which was wrongly
+    hardcoded.
+  * Symlinked copyright file to /usr/share/doc/gespeaker/copyright
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sun, 14 Jun 2009 22:06:20 +0100
+
+gespeaker (0.1-1)
+
+  * Initial release
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 13 Jun 2009 23:00:00 +0100
+
