@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="{{ site.name }} : {{ page.title}}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/{{ page.layout }}/stylesheet.css">
+    <title>{{ page.title }}</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="{{ site.gitrepo }}">View on GitHub</a>
+
+          <h1 id="project_title">{{ site.name }}</h1>
+          <h2 id="project_tagline">{{ page.title }}</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="{{ site.gitrepo }}/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="{{ site.gitrepo }}/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+{{ content }}
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">{{ site.name }} is maintained by <a href="{{ site.gitauthor }}">{{ site.author }}</a></p>
+      </footer>
+    </div>
+{% include google-analytics.html %}
+  </body>
+</html>
