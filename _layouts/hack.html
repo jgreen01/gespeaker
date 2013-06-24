@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="resources/{{ page.layout }}/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/{{ page.layout }}/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/{{ page.layout }}/print.css" media="print" />
+    <title>{{ site.name }} by {{ site.author }}</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>{{ site.name }}</h1>
+        <h2>Aggiornato localmente</h2>
+
+        <section id="downloads">
+          <a href="{{ site.gitrepo }}/zipball/master" class="btn">Download as .zip</a>
+          <a href="{{ site.gitrepo }}/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="{{ site.gitrepo }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+{{ content }}
+      </section>
+    </div>
+{% include google-analytics.html %}
+  </body>
+</html>
