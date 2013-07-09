@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="themes/{{ page.layout }}/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="themes/{{ page.layout }}/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="themes/{{ page.layout }}/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="../themes/{{ page.layout }}/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../themes/{{ page.layout }}/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../themes/{{ page.layout }}/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="../themes/{{ page.layout }}/stylesheet2.css" media="screen" />
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,9 +20,10 @@
   <body>
     <header>
       <div class="inner">
+        <img src="../resources/gespeaker.png" style="width: 128px; height: 128px; padding-right: 20px;" align="left">
         <h1>{{ site.name }}</h1>
         <h2>{{ page.title}}</h2>
-        <a href="{{ site.gitrepo }}" class="button"><small>View project on</small>GitHub</a>
+        <a href="{{ site.gitrepo }}" class="button"><small>{% if page.language == 'italian' %}Guarda il progetto su{% else %}View project on{% endif %}</small>GitHub</a>
       </div>
     </header>
 
@@ -30,12 +32,20 @@
         <section id="main-content">
 {{ content }}
         </section>
-
         <aside id="sidebar">
-          <a href="{{ site.gitrepo }}/zipball/master" class="button"><small>Download</small>.zip file</a>
-          <a href="{{ site.gitrepo }}/tarball/master" class="button"><small>Download</small>.tar.gz file</a>
-          <p class="repo-owner"><a href="{{ site.gitrepo }}">{{ site.name }}</a> is maintained by <a href="{{ site.gitauthor }}">{{ site.author }}</a>.</p>
-          <p>This page uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+{% if page.url != '/index.html' %}
+          <ul>
+            <li class="menu1"><a href="index.html">{% if page.language == 'italian' %}Introduzione{% else %}Introduction{% endif %}</a></li>
+            <li class="menu1"><a href="languages.html">{% if page.language == 'italian' %}Lingue supportate{% else %}Supported languages{% endif %}</a></li>
+            <li class="menu1"><a href="demo.html">{% if page.language == 'italian' %}Voci dimostrative{% else %}Demo voices{% endif %}</a></li>
+            <li class="menu1"><a href="changelog.html">{% if page.language == 'italian' %}Changelog{% else %}Cambiamenti{% endif %}</a></li>
+            <li class="menu1"><a href="screenshots.html">{% if page.language == 'italian' %}Schermate{% else %}Screenshots{% endif %}</a></li>
+          </ul>
+{% endif %}
+          <a href="{{ site.gitrepo }}/zipball/master" class="button"><small>{% if page.language == 'italian' %}Scarica{% else %}Download{% endif %}</small>.zip file</a>
+          <a href="{{ site.gitrepo }}/tarball/master" class="button"><small>{% if page.language == 'italian' %}Scarica{% else %}Download{% endif %}</small>.tar.gz file</a>
+          <p class="repo-owner"><a href="{{ site.gitrepo }}">{{ site.name }}</a> {% if page.language == 'italian' %}&egrave; sviluppato da{% else %}is developed by{% endif %} <a href="{{ site.gitauthor }}">{{ site.author }}</a>.</p>
+          <p>{% if page.language == 'italian' %}Questa pagina usa il tema Architect di{% else %}This page uses the Architect theme by{% endif %} <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
       </div>
     </div>
