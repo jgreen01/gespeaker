@@ -20,7 +20,7 @@
   <body>
     <header>
       <div class="inner">
-        <img src="../resources/gespeaker.png" style="width: 128px; height: 128px; padding-right: 20px;" align="left">
+        <img src="../resources/screenshots/current/icon128.png" style="width: 128px; height: 128px; padding-right: 20px;" align="left">
         <h1>{{ site.name }}</h1>
         <h2>{{ page.title}}</h2>
         <a href="{{ site.gitrepo }}" class="button"><small>{% if page.language == 'italian' %}Guarda il progetto su{% else %}View project on{% endif %}</small>GitHub</a>
@@ -37,8 +37,9 @@
           <ul>
             <li class="menu1"><a href="index.html">{% if page.language == 'italian' %}Introduzione{% else %}Introduction{% endif %}</a></li>
             <li class="menu1"><a href="languages.html">{% if page.language == 'italian' %}Lingue supportate{% else %}Supported languages{% endif %}</a></li>
+            <li class="menu1"><a href="mbrola.html">{% if page.language == 'italian' %}Motore MBROLA{% else %}MBROLA engine{% endif %}</a></li>
             <li class="menu1"><a href="demo.html">{% if page.language == 'italian' %}Voci dimostrative{% else %}Demo voices{% endif %}</a></li>
-            <li class="menu1"><a href="changelog.html">{% if page.language == 'italian' %}Changelog{% else %}Cambiamenti{% endif %}</a></li>
+            <li class="menu1"><a href="changelog.html">{% if page.language == 'italian' %}Cambiamenti{% else %}Changelog{% endif %}</a></li>
             <li class="menu1"><a href="screenshots.html">{% if page.language == 'italian' %}Schermate{% else %}Screenshots{% endif %}</a></li>
           </ul>
 {% endif %}
