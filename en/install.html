@@ -1,0 +1,30 @@
+---
+layout: architect
+title: Installation
+language: english
+---
+          <h1><a name="ubuntu" class="anchor" href="#ubuntu"></a>Installation on Ubuntu, Debian and derivatives</h1>
+          <p>Official repositories of these distributions contain and old package, the version 0.7 which presents many issues caused from serious changes in espeak and MBROLA.</p>
+          <p>It's possible to download the <strong>deb</strong> package from the <a href="download.html">Download</a> page and install it using:<br />
+          <code>cd "~/folder with the downloaded file"<br />
+            sudo dpkg -i "file name.deb"</code></p>
+          
+          <h1><a name="archlinux" class="anchor" href="#archlinux"></a>Installation on Arch Linux and derivatives</h1>
+          <p>In the AUR you can find the latest available version, it can be downloaded and built using yaourt (or a similar AUR helper) using <code>yaourt -S gespeaker</code>
+            and then following the AUR helper instructions.</p> 
+          <p>For anyone which doesn't want to use AUR the <strong>tar.xz</strong> package can be downloaded from the <a href="download.html">Download</a> page and installed using:<br />
+            <code>cd "~/folder with the downloaded file"<br />
+            sudo pacman -U "file name.pkg.tar.xz"</code></p>
+
+          <h1><a name="source" class="anchor" href="#source"></a>Installation from source code</h1>
+          <p>If the prebuilt package will not be available for your distribution you can use the source code package to install Gespeaker using:<br />
+            <code>cd "~/folder with the downloaded file"<br />
+            mkdir gespeaker-install<br />
+            tar xvzf "file name.pkg.tar.gz" -C gespeaker-install<br />
+            cd gespeaker-install/gespeaker-*<br />
+            python2 setup.py build<br />
+            sudo python2 setup.py install</code></p>
+          <p>After the installation, if no errors were reported the folder gespeaker-install can be removed from root or via <code>sudo rm -rf "gespeaker-install"</code> and the same for the downloaded source package.</p>
+          <p><strong>Warning!</strong> After executing the manual installation from source code an automatic software uninstall will not be possibile but you will have to manually
+            delete all the installed files that were reported during the last installation step.</p>
+
