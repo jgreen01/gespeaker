@@ -1,0 +1,21 @@
+gespeaker (0.8.2-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/watch: changed mirror to github
+  * debian/control: changed homepage URL
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sun, 14 Jul 2013 17:48:23 +0200
+
+gespeaker (0.7-2) unstable; urgency=low
+
+  * debian/control: bump Standards-Version 3.9.1
+  * Switched to format 3.0 (quilt)
+  * Change mbrola voices path (Closes: #597406)
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 09 Oct 2010 13:01:19 +0200
+
+gespeaker (0.7-1) unstable; urgency=low
+
+  * Initial release (Closes: #559684)
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sat, 12 Dec 2009 19:59:25 +0100

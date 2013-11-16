@@ -1,0 +1,4 @@
+# watch control file for uscan
+version=3
+https://github.com/muflone/gespeaker/releases \
+  /muflone/gespeaker/archive/(.*)\.tar\.gz
