@@ -1,3 +1,5 @@
 *.8.2.tar.gz
-/DEBIAN/build/
-/ARCHLINUX/build/
+/Debian/build/
+/Arch Linux/build/
+/openSUSE 12/build/
+/Fedora 16/build/
