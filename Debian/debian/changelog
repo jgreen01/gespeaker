@@ -1,22 +1,41 @@
-gespeaker (0.8.4-1) unstable; urgency=medium
+gespeaker (0.8.5-1) unstable; urgency=medium
 
-  * New upstream version
+  * New upstream release.
+  * Add myself to Uploaders.
+  * Update Standards version to 3.9.6.
 
- -- Fabio Castelli <muflone@vbsimple.net>  Sun, 17 May 2015 20:30:31 +0200
+ -- Vincent Cheng <vcheng@debian.org>  Sun, 26 Oct 2014 00:27:05 -0700
 
-gespeaker (0.8.3-1) unstable; urgency=low
+gespeaker (0.8.2-2) unstable; urgency=medium
 
-  * New upstream version
+  * Team upload.
+  * Add dependency on python-xdg. (Closes: #756038)
 
- -- Fabio Castelli <muflone@vbsimple.net>  Sun, 17 May 2015 19:57:07 +0200
+ -- Vincent Cheng <vcheng@debian.org>  Sat, 09 Aug 2014 00:02:59 -0700
 
-gespeaker (0.8.2-1) unstable; urgency=low
+gespeaker (0.8.2-1) unstable; urgency=medium
 
-  * New upstream version
-  * debian/watch: changed mirror to github
-  * debian/control: changed homepage URL
+  * Team upload.
 
- -- Fabio Castelli <muflone@vbsimple.net>  Sun, 14 Jul 2013 17:48:23 +0200
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Vincent Cheng ]
+  * New upstream release.
+  * Drop patch; merged upstream.
+  * Drop cdbs and switch to dh and dh_python2.
+  * Fix grammar error in description in debian/control. (Closes: #686917)
+  * Update homepage.
+  * Update Standards version to 3.9.5.
+  * Update watch file.
+
+ -- Vincent Cheng <vcheng@debian.org>  Wed, 05 Feb 2014 01:56:39 -0800
+
+gespeaker (0.7-3) unstable; urgency=low
+
+  * debian/control: add dependency on librsvg2-common (Closes: #617600)
+
+ -- Matt Kraai <kraai@debian.org>  Mon, 21 Mar 2011 21:21:46 -0700
 
 gespeaker (0.7-2) unstable; urgency=low
 

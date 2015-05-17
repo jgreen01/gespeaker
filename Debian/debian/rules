@@ -1,15 +1,14 @@
 #!/usr/bin/make -f
 
-# Uncomment this to turn on verbose mode.
-# export DH_VERBOSE=1
-
-DEB_PYTHON_SYSTEM=pysupport
-DEB_PYTHON_INSTALL_ARGS_ALL += --install-lib=/usr/share/gespeaker
-
 %:
-	dh $@
+	dh $@ --with python2
 
-clean:
-	dh $@
-	rm -fr build
+override_dh_clean:
+	rm -rf build/
+	dh_clean
 
+override_dh_auto_build:
+
+override_dh_auto_install:
+	python setup.py install --root=debian/gespeaker --install-layout=deb \
+	--install-lib=/usr/share/gespeaker

@@ -2,23 +2,34 @@ Source: gespeaker
 Section: sound
 Priority: optional
 Maintainer: Fabio Castelli <muflone@vbsimple.net>
-Uploaders: Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>
-Standards-Version: 3.9.1
-Build-Depends: python (>= 2.6), debhelper (>= 7.0.50~)
-Build-Depends-Indep: python-support (>=0.6)
-Homepage: https://github.com/muflone/gespeaker
-Vcs-Svn: svn://svn.debian.org/svn/python-apps/packages/gespeaker/trunk/
-Vcs-Browser: http://svn.debian.org/viewsvn/python-apps/packages/gespeaker/trunk/
+Uploaders:
+ Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>,
+ Vincent Cheng <vcheng@debian.org>
+Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3~)
+X-Python-Version: >= 2.6
+Standards-Version: 3.9.6
+Homepage: http://www.muflone.com/gespeaker/
+Vcs-Svn: svn://anonscm.debian.org/python-apps/packages/gespeaker/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-apps/packages/gespeaker/trunk/
 
 Package: gespeaker
 Architecture: all
-Depends: espeak, espeak-data, python-gtk2, python-glade2, python-gobject, python-xdg, alsa-utils | pulseaudio-utils, librsvg2-common, ${misc:Depends}, ${python:Depends}
-Suggests: mbrola, devhelp
+Depends:
+ alsa-utils | pulseaudio-utils,
+ espeak,
+ espeak-data,
+ librsvg2-common,
+ python-glade2,
+ python-gobject,
+ python-gtk2,
+ python-xdg,
+ ${misc:Depends},
+ ${python:Depends}
+Suggests: mbrola
 Description: GTK+ front-end for eSpeak and mbrola
  Gespeaker is a GTK+ frontend for eSpeak and mbrola.
- It allows one to play a text in many languages with settings 
+ It allows one to play a text in many languages with settings
  for voice, pitch, volume, speed and word gap.
  .
  Since version 0.6 it can use mbrola package and voices to
  obtain a more realistic text reading experience.
-
