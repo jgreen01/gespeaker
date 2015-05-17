@@ -1,3 +1,9 @@
+gespeaker (0.8.4-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Fabio Castelli <muflone@vbsimple.net>  Sun, 17 May 2015 20:30:31 +0200
+
 gespeaker (0.8.3-1) unstable; urgency=low
 
   * New upstream version
